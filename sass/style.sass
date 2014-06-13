@@ -1,0 +1,149 @@
+@import url(http://fonts.googleapis.com/css?family=Arvo|Cabin|Lobster+Two:700italic);
+html, body {
+  font-family: Cabin, sans-serif;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  background-color: #ec9;
+}
+.banner {
+  background-color: #524018;
+  background: url(/wood.jpg);
+  margin: 0px;
+  display: block;
+  min-height: 100px;
+  position: relative;
+}
+.banner h1 {
+  font-family: 'Lobster Two', cursive;
+  font-weight: 700;
+  font-style: italic;
+  display: block;
+  margin: 0px;
+  color: #CCFF99;
+  margin-left: 6px;
+  padding-top: 12px;
+  a {
+    color: #CCFF99;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}
+.gallery h1 {
+  font-family: 'Lobster Two', cursive;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 400%;
+  text-shadow: 0px 0px 5px white;
+}
+.gallery .header {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  text-align: center;
+}
+ul.navigation{
+  list-style-type: none;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  font-family: Arvo, serif;
+  color: white;
+  padding: 0px;
+  border-bottom: 3px solid ivory;
+
+}
+ul.navigation li {
+    background-color: rgba(255,255,255,0.3);
+    font-variant: small-caps;
+    margin: 0px 2px;
+    text-align: center;
+    font-size: 18px;
+    padding: 4px;
+}
+h1.mobile {
+  display: none;
+}
+
+/** mobile devices */
+@media all and (max-width: 520px){
+  ul.navigation li{
+    width: 100%;
+  }
+  .banner h1:not(.mobile){
+    display: none;
+  }
+  .banner h1.mobile {
+    display: inline;
+  }
+  .gallery .header {
+    /*display: none;*/
+    font-size: 10px;
+    a.btn {
+      display: none;
+    }
+  }
+}
+@media all and (min-width: 520px) {
+  ul.navigation li {
+    width: 80px;
+    display: inline-block;
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    cursor: pointer;
+  }
+  ul.navigation {
+    position: absolute;
+    bottom: 0px;
+  }
+  .gallery {
+    height: 300px;
+  }
+}
+ul.navigation li:hover {
+  color: #333;
+  background-color: ivory;
+}
+.gallery{
+  margin: 0px;
+  overflow: hidden;
+  border-bottom: 8px solid #320;
+  position: relative;
+}
+.gallery img.art {
+  width:100%;
+  /*position: absolute;*/
+  bottom: 0px;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: Arvo, serif;
+  margin-top: 2px;
+}
+
+.index-body.container-fluid {
+  max-width: 90%;
+  margin: auto;
+  margin-top: 16px;
+}
+
+.index-col {
+  border-radius: 8px;
+  box-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+  padding: 16px;
+  background-color: ivory;
+  margin-bottom: 8px;
+
+  h2 {
+    text-transform: uppercase;
+  }
+  h3, h4, h5 {
+    font-variant: small-caps;
+  }
+}
