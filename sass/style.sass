@@ -31,12 +31,14 @@ html, body {
     text-decoration: none;
   }
 }
-.gallery h1 {
+h1 {
   font-family: 'Lobster Two', cursive;
   font-weight: 700;
   font-style: italic;
-  font-size: 400%;
+}
+.gallery h1 {
   text-shadow: 0px 0px 5px white;
+  font-size: 400%;
 }
 .gallery .header {
   position: absolute;
@@ -55,6 +57,9 @@ ul.navigation{
   border-bottom: 3px solid ivory;
 
 }
+.list-group-item-heading small{
+  margin-left:8px;
+}
 ul.navigation li {
     background-color: rgba(255,255,255,0.3);
     font-variant: small-caps;
@@ -62,6 +67,9 @@ ul.navigation li {
     text-align: center;
     font-size: 18px;
     padding: 4px;
+    a {
+      color: white;
+    }
 }
 h1.mobile {
   display: none;
@@ -109,6 +117,10 @@ h1.mobile {
 ul.navigation li:hover {
   color: #333;
   background-color: ivory;
+  a {
+    color: black;
+    text-decoration: none;
+  }
 }
 .gallery{
   margin: 0px;
@@ -142,8 +154,8 @@ h2, h3, h4, h5, h6 {
 
   h2 {
     text-transform: uppercase;
+    text-align: center;
   }
   h3, h4, h5 {
-    font-variant: small-caps;
   }
 }
