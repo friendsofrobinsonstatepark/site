@@ -3,7 +3,7 @@ var jade = require('gulp-jade');
 var connect = require('connect');
 var sass = require('gulp-sass');
 
-gulp.task('default', ['render-jade','styles', 'backgrounds','icons'], function(){
+gulp.task('default', ['render-jade','styles','docs','backgrounds','icons'], function(){
 });
 
 gulp.task('render-jade', function(){
@@ -26,6 +26,11 @@ gulp.task('icons', function(){
 gulp.task('backgrounds', function(){
   gulp.src('./backgrounds/*')
                    .pipe(gulp.dest('./build'));
+});
+
+gulp.task('docs', function(){
+  gulp.src('./docs/*')
+      .pipe(gulp.dest('./build/docs'));
 });
 
 gulp.task('watch', function(){

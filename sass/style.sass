@@ -4,7 +4,7 @@ html, body {
   width: 100%;
   margin: 0px;
   padding: 0px;
-  background-color: #ec9;
+  background-color: #524018;
 }
 .banner {
   background-color: #524018;
@@ -13,6 +13,10 @@ html, body {
   display: block;
   min-height: 100px;
   position: relative;
+}
+
+a:hover{
+  text-decoration:none;
 }
 .banner h1 {
   font-family: 'Lobster Two', cursive;
@@ -60,16 +64,21 @@ ul.navigation{
 .list-group-item-heading small{
   margin-left:8px;
 }
-ul.navigation li {
+ul.navigation li{
+  margin: 0px;
+  padding: 0px 4px;
+}
+ul.navigation li a{
     background-color: rgba(255,255,255,0.3);
     font-variant: small-caps;
-    margin: 0px 2px;
     text-align: center;
     font-size: 18px;
+    margin: 0px;
     padding: 4px;
-    a {
-      color: white;
-    }
+    color: white;
+}
+ul.navigation li.active a{
+  background-color: rgba(255,255,255,0.6);
 }
 h1.mobile {
   display: none;
@@ -77,7 +86,7 @@ h1.mobile {
 
 /** mobile devices */
 @media all and (max-width: 520px){
-  ul.navigation li{
+  ul.navigation li a{
     width: 100%;
   }
   .banner h1:not(.mobile){
@@ -95,16 +104,17 @@ h1.mobile {
   }
 }
 @media all and (min-width: 520px) {
-  ul.navigation li {
-    width: 80px;
-    display: inline-block;
+  ul.navigation li a{
+    width: 100px;
     -webkit-border-top-left-radius: 4px;
     -webkit-border-top-right-radius: 4px;
     -moz-border-radius-topleft: 4px;
     -moz-border-radius-topright: 4px;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
-    cursor: pointer;
+  }
+  ul.navigation li {
+    display: inline-block;
   }
   ul.navigation {
     position: absolute;
@@ -114,13 +124,11 @@ h1.mobile {
     height: 300px;
   }
 }
-ul.navigation li:hover {
+ul.navigation li a:hover {
   color: #333;
   background-color: ivory;
-  a {
-    color: black;
-    text-decoration: none;
-  }
+  color: black;
+  text-decoration: none;
 }
 .gallery{
   margin: 0px;
@@ -139,10 +147,11 @@ h2, h3, h4, h5, h6 {
   margin-top: 2px;
 }
 
-.index-body.container-fluid {
-  max-width: 90%;
-  margin: auto;
-  margin-top: 16px;
+.container-fluid {
+  width: 100%;
+  margin: 0;
+  padding: 16px 50px;
+  background-color: #ec9;
 }
 
 .index-col {
@@ -158,4 +167,39 @@ h2, h3, h4, h5, h6 {
   }
   h3, h4, h5 {
   }
+}
+
+.news {
+  .col-md-12 {
+    text-align: center;
+  }
+  .index-col {
+    max-width:700px;
+    margin:auto;
+    margin-top:18px;
+    text-align:left;
+  }
+  h1{
+    text-align:center;
+  }
+}
+
+.banner.footer {
+  text-align: center;
+  padding: 16px;
+  color: white;
+  border-top: 3px solid ivory;
+  a {
+    color: white;
+  }
+  a:hover{
+    color: #ccc;
+  }
+  .link-box:not(:first-child)::before{
+    content:' | ';
+  }
+}
+
+#map {
+  border-bottom: 3px solid #320;
 }
