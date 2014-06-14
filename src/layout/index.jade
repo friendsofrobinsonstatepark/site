@@ -30,6 +30,11 @@ html
           li(class=(page===link.name?'active':'')): a(href=link.href)= link.title
     block main
     .banner.footer
-      each page in pages
-        span.link-box
-          a(href=page.href)= page.title
+      div
+        each page in pages
+          span.link-box
+            a(href=page.href)= page.title
+      div
+        a(href="http://github.com/friendsofrobinsonstatepark") 
+          i.fa.fa-github
+          | &nbsp;Contribute
