@@ -2,12 +2,14 @@ var gulp = require('gulp');
 var jade = require('gulp-jade');
 var connect = require('connect');
 var sass = require('gulp-sass');
+var entityconvert = require('gulp-entity-convert');
 
 gulp.task('default', ['render-jade','styles','docs','backgrounds','icons'], function(){
 });
 
 gulp.task('render-jade', function(){
   gulp.src('./src/*.jade')
+                   .pipe(entityconvert())
                    .pipe(jade())
                    .pipe(gulp.dest('./build'));
 });
