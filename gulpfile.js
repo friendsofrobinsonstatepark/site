@@ -4,7 +4,7 @@ var connect = require('connect');
 var sass = require('gulp-sass');
 var entityconvert = require('gulp-entity-convert');
 
-gulp.task('default', ['render-jade','styles','docs','backgrounds','icons'], function(){
+gulp.task('default', ['render-jade','styles','photos','docs','backgrounds','icons'], function(){
 });
 
 gulp.task('render-jade', function(){
@@ -22,6 +22,11 @@ gulp.task('styles', function(){
 
 gulp.task('icons', function(){
   gulp.src('./icons/*')
+                   .pipe(gulp.dest('./build'));
+});
+
+gulp.task('photos', function(){
+  gulp.src('./photos/*')
                    .pipe(gulp.dest('./build'));
 });
 
