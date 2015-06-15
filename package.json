@@ -21,6 +21,6 @@
     "gulp": "^3.8.2",
     "gulp-entity-convert": "0.0.1",
     "gulp-jade": "^0.6.0",
-    "gulp-sass": "^0.7.2"
+    "gulp-less": "^3.0.3"
   }
 }
